@@ -8,52 +8,10 @@
     justify-content: center;;
 }
 
-.inputSearchBar{
-    width: 610px;
-    padding: 11px 0px 11px 16px;
-    outline: none;
-    border-radius: 5px;
-    border: none;
-    
-}
-
 .imgLogo{
 
     display: inline-flex;
     margin-left: 2rem;
-}
-
-.inputBar{
-    display: inline-flex;
-    max-width: 646px;
-    width: 100%;
-    position: relative;
- 
-    
-}
-    
-.inputSearchBar{
-    outline: none;
-    border: none;
-    font-size: 16px;
-    flex-wrap: nowrap;
-    padding: 10px 0px;
-    margin-left: 50px;
-}
-
-.IconSearch{
-    background-color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    right: 5px;
-    top: 1px;
-    color: #F80032;
-    font-size: 25px;
-    cursor: pointer;
-    padding: 5px;
-    border-radius:5px ;
 }
 
 .btnLogin,svg{
