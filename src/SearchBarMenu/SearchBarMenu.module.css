@@ -1,0 +1,86 @@
+
+.mainMenu{
+    display:flex;
+    background-color: #F80032; 
+    width: 100%;
+    height: 120px;
+    align-items: center;
+    justify-content: center;;
+}
+
+.inputSearchBar{
+    width: 610px;
+    padding: 11px 0px 11px 16px;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    
+}
+
+.imgLogo{
+
+    display: inline-flex;
+    margin-left: 2rem;
+}
+
+.inputBar{
+    display: inline-flex;
+    max-width: 646px;
+    width: 100%;
+    position: relative;
+ 
+    
+}
+    
+.inputSearchBar{
+    outline: none;
+    border: none;
+    font-size: 16px;
+    flex-wrap: nowrap;
+    padding: 10px 0px;
+    margin-left: 50px;
+}
+
+.IconSearch{
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 5px;
+    top: 1px;
+    color: #F80032;
+    font-size: 25px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius:5px ;
+}
+
+.btnLogin,svg{
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    white-space: nowrap;
+    margin-left: 8px;
+    line-height: 18px;
+    align-items: center;
+}
+
+.navLinks{
+    margin-left: 30px;
+}
+
+.navLinks>a>svg{
+ margin: 15px;
+  flex-direction: row!important; 
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+}
+
+.userIcon{
+    margin-left: 50px;
+}
+
