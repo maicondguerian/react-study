@@ -1,9 +1,6 @@
 import Image from '../assets/img/top.webp';
 import Styles from './top.module.css'; 
 
-
-
-
 const Top = () =>{
     return(
        <>
@@ -13,5 +10,4 @@ const Top = () =>{
        </>
     )
 }
-
 export default Top;
