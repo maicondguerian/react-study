@@ -28,14 +28,17 @@
 
 .navLinks{
     margin-left: 30px;
+    display: flex;
+    align-items: center;
 }
 
 .navLinks>a>svg{
  margin: 15px;
-  flex-direction: row!important; 
+  flex-direction: row;
   display: inline-block;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease 0s;
 }
 
 .userIcon{
