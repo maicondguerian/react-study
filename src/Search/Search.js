@@ -4,7 +4,7 @@ import  { useState } from 'react';
  const Search =({Icon})=>{
     const [isModalVisible, setIsModalVisible] = useState(false);
     
-    const Modal =()=>{
+    const Overlay =()=>{
         return(
             <>
                 { isModalVisible ? <div className={Styles.BlurBody} onClick={()=>setIsModalVisible(false)}></div> : null}
@@ -15,12 +15,13 @@ import  { useState } from 'react';
     return(
         <>
             <div  className={Styles.inputBar}>
-                <input type="text" className={Styles.inputSearchBar} name="Search-bar" value="" placeholder='busque aqui seu produto' onClick={()=>setIsModalVisible(true)} />
+                <input type="text" className={Styles.inputSearchBar} name="Search-bar"  placeholder='busque aqui seu produto' onClick={()=>setIsModalVisible(true)} />
                 { Icon == null ? <></> : <Icon className={Styles.IconSearch} />}
-                <Modal/>
+                <Overlay/>
             </div>
             
         </>
     )
+    
  }
  export default Search;
