@@ -30,7 +30,7 @@ const ButtonLogin =()=> {
         <span>olá, faça seu login</span><br/><span>ou cadastre-se </span>
         <svg viewBox="0 0 18 11" aria-labelledby="arrowIcon arrowDesc" fill="#fff" width="10px" height="6px"><path fill="inherit" d="M2.1 0L0 2.1 9 11l9-8.9L15.9 0 9 6.8 2.1 0z"></path></svg>
       </button>
-      <Modal isOpen={modalIsOpen}>
+      <Modal isOpen={modalIsOpen} onCloseModal={() => { setModalIsOpen(false) }}>
         <p>pra ver seus pedidos e ter uma experiência personalizada, acesse sua conta :)</p>
         <button type="">entrar</button>
         <button type="">cadastrar</button>

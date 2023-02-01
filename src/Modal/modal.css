@@ -6,11 +6,5 @@
     right: 500px;
     top: 150px;
     border-radius: 5px;
-    
-}
-
-.teste{
-    background-color: black;
-    z-index: 1;
-    
+    z-index: 71;
 }
