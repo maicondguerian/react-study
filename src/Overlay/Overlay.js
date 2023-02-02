@@ -1,8 +1,10 @@
-import styles from "./Overlay.module.css";
+import cssClass from "./Overlay.module.css";
 
-const Overlay = ({ children, onclick = () => {} }) => {
+const Overlay = ({ children, onclick = () => {}, zIndex=70 }) => {
     return (
-        <div className={styles.overlay} onClick={onclick}>
+        <div className={cssClass.overlay} onClick={onclick} style={{
+            zIndex: zIndex
+        }}>
             {children}
         </div>
     )

@@ -11,9 +11,8 @@ import  { useState } from 'react';
             <div  className={Styles.inputBar}>
                 <input type="text" className={Styles.inputSearchBar} name="Search-bar"  placeholder='busque aqui seu produto' onClick={()=>setIsModalVisible(true)} />
                 { Icon == null ? <></> : <Icon className={Styles.IconSearch} />}
-                { isModalVisible ? <Overlay></Overlay> : null}
             </div>
-            
+            { isModalVisible ? <Overlay zIndex={68}></Overlay> : null}
         </>
     )
     

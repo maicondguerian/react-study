@@ -32,4 +32,5 @@
     display: inline-flex;
     max-width: 646px;
     position: relative; 
+    z-index: 69;
 }
