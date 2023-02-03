@@ -1,0 +1,49 @@
+
+.mainMenu{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 145px;
+    margin-left: 715px;
+    width: 100%;
+}
+
+ul,li{
+    list-style-type: none;
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    margin-left: 120px;
+    
+}
+
+
+li:hover{
+    background-color: rgba(198, 5, 43, 0.702);
+    border-radius: 5px;
+    transition: ease-in all 0.1s;
+    padding: 0;
+    margin: 0 5px 0 5px;
+}
+
+
+.btn_,li{
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    display: flex;
+    font-size: 14px;
+    white-space: nowrap;
+    margin: 5px;
+    line-height: 18px;
+    align-items: center;
+    cursor: pointer;
+    
+}
+
+.svgIcon{
+    margin-right: 5px;
+    margin-left: 5px;
+}
+

@@ -3,9 +3,11 @@
     display:flex;
     background-color: #F80032; 
     width: 100%;
-    height: 120px;
+    height: 130px;
     align-items: center;
-    justify-content: center;;
+    justify-content: center;
+   
+    
 }
 
 .imgLogo{
@@ -42,6 +44,11 @@
 }
 
 .userIcon{
-    margin-left: 50px;
 }
 
+.searchBarIconsContainer {
+    display: flex;
+    margin-left: 50px;
+    cursor: pointer;
+    z-index: 71;
+}

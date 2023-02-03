@@ -12,7 +12,7 @@ import  { useState } from 'react';
                 <input type="text" className={Styles.inputSearchBar} name="Search-bar"  placeholder='busque aqui seu produto' onClick={()=>setIsModalVisible(true)} />
                 { Icon == null ? <></> : <Icon className={Styles.IconSearch} />}
             </div>
-            { isModalVisible ? <Overlay zIndex={68}></Overlay> : null}
+            { isModalVisible ? <Overlay zIndex={68} onclick={()=>{setIsModalVisible(false)}}></Overlay> : null}
         </>
     )
     

@@ -1,7 +1,8 @@
 import './App.css';
-import Top from './Top/Top.js';
-import SearchBar from './SearchBarMenu/SearchBarMenu';
-import Modal from './Modal/Modal';
+import Top from './Components/Top/Top.js';
+import SearchBar from './Components/SearchBarMenu/SearchBarMenu';
+
+
 
 function App() {
   return (

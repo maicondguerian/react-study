@@ -1,9 +1,10 @@
-import logo from '../assets/img/logo.png';
+import logo from '../../assets/img/logo.png';
 import Styles from './SearchBarMenu.module.css';
 import Search from "../Search/Search.js";
 import { FiSearch } from "react-icons/fi";
 import React, { useState } from "react";
 import Modal from '../Modal/Modal';
+import MenuLinks from '../MenuLinks/Menulinks';
 
 const SearchBarIcons =()=>{
   return(
@@ -14,23 +15,33 @@ const SearchBarIcons =()=>{
     </nav> 
   )
 }
-const ButtonLogin =()=> {
-  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const ButtonLogin =()=> {
+    const [modalIsOpen, setModalIsOpen] = useState(false);
 
-  const onMouseOver = () => {
-    setModalIsOpen(!modalIsOpen);
-  }
+    const onMouseOver = () => {
+      setModalIsOpen(true);
+    }
+    const handleMouseOut = ($event) => {
+      setModalIsOpen(false);
+    };
+
+
 
   return(
     <>
-      <div className={Styles.userIcon}  onMouseOver={onMouseOver}>
-        <svg width="32px" height="32px" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" fillOpacity="0.01" d="M4.204 4.2H29.83v25.6H4.204z"></path><path fillRule="evenodd" clipRule="evenodd" d="M17.017 8.466a4.269 4.269 0 014.272 4.267A4.269 4.269 0 0117.017 17a4.269 4.269 0 01-4.27-4.267 4.269 4.269 0 014.27-4.267zm0 1.6a2.668 2.668 0 00-2.67 2.667 2.668 2.668 0 002.67 2.667 2.668 2.668 0 002.67-2.667 2.668 2.668 0 00-2.67-2.667zm0 8.534c1.478 0 3.53.48 5.175 1.24 2.07.955 3.368 2.246 3.368 3.826 0 1.031-.837 1.867-1.869 1.867H10.344a1.868 1.868 0 01-1.87-1.867c0-1.58 1.3-2.87 3.369-3.826 1.645-.76 3.696-1.24 5.174-1.24zm0 1.6c-1.251 0-3.077.435-4.502 1.093-1.67.77-2.438 1.614-2.438 2.373 0 .148.12.267.267.267H23.69c.148 0 .267-.12.267-.267 0-.76-.77-1.603-2.438-2.373-1.425-.658-3.251-1.093-4.503-1.093z" fill="#fff"></path><ellipse cx="17.017" cy="17" rx="16.017" ry="16" stroke="#fff" strokeWidth="2"></ellipse></svg>
+      <div onMouseEnter={onMouseOver} onMouseLeave={handleMouseOut} className={Styles.searchBarIconsContainer}>
+        <div className={Styles.userIcon}>
+          <svg width="32px" height="32px" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" fillOpacity="0.01" d="M4.204 4.2H29.83v25.6H4.204z"></path><path fillRule="evenodd" clipRule="evenodd" d="M17.017 8.466a4.269 4.269 0 014.272 4.267A4.269 4.269 0 0117.017 17a4.269 4.269 0 01-4.27-4.267 4.269 4.269 0 014.27-4.267zm0 1.6a2.668 2.668 0 00-2.67 2.667 2.668 2.668 0 002.67 2.667 2.668 2.668 0 002.67-2.667 2.668 2.668 0 00-2.67-2.667zm0 8.534c1.478 0 3.53.48 5.175 1.24 2.07.955 3.368 2.246 3.368 3.826 0 1.031-.837 1.867-1.869 1.867H10.344a1.868 1.868 0 01-1.87-1.867c0-1.58 1.3-2.87 3.369-3.826 1.645-.76 3.696-1.24 5.174-1.24zm0 1.6c-1.251 0-3.077.435-4.502 1.093-1.67.77-2.438 1.614-2.438 2.373 0 .148.12.267.267.267H23.69c.148 0 .267-.12.267-.267 0-.76-.77-1.603-2.438-2.373-1.425-.658-3.251-1.093-4.503-1.093z" fill="#fff"></path><ellipse cx="17.017" cy="17" rx="16.017" ry="16" stroke="#fff" strokeWidth="2"></ellipse></svg>
+        </div>
+        <button type="" className={Styles.btnLogin}>
+          <span>olá, faça seu login</span><br/><span>ou cadastre-se </span>
+          <svg viewBox="0 0 18 11" aria-labelledby="arrowIcon arrowDesc" fill="#fff" width="10px" height="6px">
+          <path fill="inherit" d="M2.1 0L0 2.1 9 11l9-8.9L15.9 0 9 6.8 2.1 0z"></path></svg>
+        </button>
       </div>
-      <button type="" className={Styles.btnLogin} onMouseOver={onMouseOver}>
-        <span>olá, faça seu login</span><br/><span>ou cadastre-se </span>
-        <svg viewBox="0 0 18 11" aria-labelledby="arrowIcon arrowDesc" fill="#fff" width="10px" height="6px"><path fill="inherit" d="M2.1 0L0 2.1 9 11l9-8.9L15.9 0 9 6.8 2.1 0z"></path></svg>
-      </button>
-      <Modal isOpen={modalIsOpen} onCloseModal={() => { setModalIsOpen(false) }}>
+      <Modal isOpen={modalIsOpen} 
+        onCloseModal={() => { setModalIsOpen(false) }}
+        >
         <p>pra ver seus pedidos e ter uma experiência personalizada, acesse sua conta :)</p>
         <button type="">entrar</button>
         <button type="">cadastrar</button>
@@ -54,9 +65,11 @@ const SearchBar =()=>{
       <>
         <div className={Styles.mainMenu}>
           <LogoAmericanas/>
+          <MenuLinks/>
           <Search Icon={FiSearch}/>
           <ButtonLogin/>
           <SearchBarIcons/>
+          
         </div>
       </>
     )

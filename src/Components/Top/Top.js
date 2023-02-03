@@ -1,4 +1,4 @@
-import Image from '../assets/img/top.webp';
+import Image from '../../assets/img/top.webp'
 import Styles from './top.module.css'; 
 
 const Top = () =>{

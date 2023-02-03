@@ -1,5 +1,5 @@
 import React from "react";
-import './modal.css';
+import "./Modal.css";
 import Overlay from "../Overlay/Overlay";
 
 export default function Modal ({ children, isOpen=false, onCloseModal = () => {} }) {
