@@ -32,15 +32,23 @@
     margin-left: 30px;
     display: flex;
     align-items: center;
+    width: 163px;
 }
 
-.navLinks>a>svg{
- margin: 15px;
-  flex-direction: row;
-  display: inline-block;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease 0s;
+.navLinks>svg:hover {
+    height: 33px;
+}
+
+.navLinks>svg{
+    margin: 15px;
+    height: 24px;
+    width: auto;
+    flex-direction: row;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
 }
 
 .userIcon{

@@ -3,11 +3,7 @@ import Styles from './top.module.css';
 
 const Top = () =>{
     return(
-       <>
-        <div className="top-header">
-         <img src={Image} alt="img" className={Styles.img}/> 
-       </div>
-       </>
+      <img src={Image} alt="img" className={Styles.img}/> 
     )
 }
 export default Top;
