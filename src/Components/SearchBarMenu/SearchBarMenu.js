@@ -64,12 +64,18 @@ const SearchBar =()=>{
     return(
       <>
         <div className={Styles.mainMenu}>
-          <LogoAmericanas/>
-          <MenuLinks/>
-          <Search Icon={FiSearch}/>
-          <ButtonLogin/>
-          <SearchBarIcons/>
-          
+          <div style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            marginBottom: '40px'
+          }}>
+            <LogoAmericanas/>
+            <MenuLinks/>
+            <Search Icon={FiSearch}/>
+            <ButtonLogin/>
+            <SearchBarIcons/>
+          </div>
         </div>
       </>
     )
