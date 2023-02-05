@@ -1,44 +1,46 @@
-
 .mainMenu{
     display: flex;
     flex-direction: row;
     position: fixed;
-    top: 145px;
+    top: 130px;
     margin-left: 715px;
     width: 100%;
 }
 
-ul,li{
+ul{
     list-style-type: none;
     display: flex;
     width: 50%;
     justify-content: space-around;
-    margin-left: 120px;
-    
+    margin-left: 150px; 
+    font-weight: 700;
+    color: #fff;
+    font-size: 14px;
+    white-space: nowrap;
+    cursor: pointer;
 }
 
+li{
+    padding: 10px 10px;
+}
 
 li:hover{
     background-color: rgba(198, 5, 43, 0.702);
     border-radius: 5px;
     transition: ease-in all 0.1s;
-    padding: 0;
-    margin: 0 5px 0 5px;
 }
 
-
-.btn_,li{
+.btn_{
     background-color: transparent;
     border: none;
-    color: #fff;
     font-weight: 700;
-    display: flex;
+    color: #fff;
     font-size: 14px;
-    white-space: nowrap;
-    margin: 5px;
-    line-height: 18px;
-    align-items: center;
     cursor: pointer;
+}
+
+.btn_,li{
+    margin: 5px;
     
 }
 
@@ -47,3 +49,6 @@ li:hover{
     margin-left: 5px;
 }
 
+.divCep{
+    z-index: 71;
+}

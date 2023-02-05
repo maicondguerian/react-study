@@ -1,12 +1,21 @@
 .content{
     background-color: #fff;
-    width: 250px;
-    height: 200px;
+    width: 265px;
+    height: 255px;
     position: fixed;
     right: 500px;
     top: 150px;
-    border-radius: 5px;
+    border-radius: 15px;
     z-index: 71;
     box-shadow: 0px 7px 17px -7px rgba(0,0,0,0.59);
-    
+}
+
+.spike{
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid #fff;
+    position: fixed;
+    right: 500px;
+    top: 139px;
+    z-index: 71;
 }

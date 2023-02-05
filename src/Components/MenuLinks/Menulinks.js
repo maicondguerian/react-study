@@ -1,16 +1,31 @@
-import './menulinks.css'
+import Modal from '../Modal/Modal'
+import { useState } from 'react'
+import Styles from './menuLinks.module.css'
 
 export default function MenuLinks() {
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+
+    const onMouseOver = () => {
+      setModalIsOpen(true);
+    }
+    const handleMouseOut = () => {
+      setModalIsOpen(false);
+    };
     
     return (
         <>
-            <main className="mainMenu">
-                <div className='divCep'>
-                    <button className='btn_'>
+            <main className={Styles.mainMenu}>
+                <div className={Styles.divCep}>
+                    <button className={Styles.btn_} onMouseOver={onMouseOver} onMouseLeave={handleMouseOut}>
                     <svg width="20px" height="20px" viewBox="0 0 29 32"  fill= "rgb(255, 255, 255)"className='svgIcon'>
                         <path fill="inherit" d="M12 0c6.44 0 11.667 5.155 11.667 11.523 0 3.045-1.82 7.31-4.747 12.017l-.312.497c-1.192 1.878-2.485 3.695-3.618 5.108l-.406.501c-1.188 1.449-1.824 2.02-2.584 2.02-.843 0-1.532-.702-2.99-2.52l-.19-.24a59.948 59.948 0 01-3.428-4.868l-.312-.498C2.152 18.834.333 14.57.333 11.523.333 5.155 5.561 0 12 0zm0 28.801c.262-.281.575-.646.922-1.074l.298-.372a57.483 57.483 0 003.277-4.657c2.868-4.52 4.67-8.645 4.67-11.175 0-4.98-4.1-9.023-9.167-9.023-5.066 0-9.167 4.044-9.167 9.023 0 2.445 1.682 6.377 4.382 10.717l.288.458a57.472 57.472 0 003.277 4.657l.298.372.226.276c.184.221.356.422.514.598l.182.2zm0-22.968A5.833 5.833 0 1112 17.5a5.833 5.833 0 010-11.667zm0 2.5A3.333 3.333 0 1012 15a3.333 3.333 0 000-6.667z"></path></svg>
-                    <span>infome seu CEP</span>
+                    <span>
+                        infome seu CEP
+                    </span>
                     </button>
+                    <Modal  isOpen={modalIsOpen}>
+                        <p>teste</p>
+                    </Modal>
                 </div>
                 <ul>
                     <li>
