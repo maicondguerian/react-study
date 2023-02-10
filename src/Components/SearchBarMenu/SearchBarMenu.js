@@ -37,7 +37,7 @@ const ButtonLogin = () => {
   const onMouseOver = () => {
     setModalIsOpen(true);
   }
-  const handleMouseOut = ($event) => {
+  const handleMouseOut = () => {
     setModalIsOpen(false);
   };
 
@@ -53,16 +53,15 @@ const ButtonLogin = () => {
             <path fill="inherit" d="M2.1 0L0 2.1 9 11l9-8.9L15.9 0 9 6.8 2.1 0z"></path></svg>
         </button>
       </div>
-      <Modal isOpen={modalIsOpen}
-        onMouseEnter={onMouseOver} onMouseLeave={handleMouseOut}
-        onCloseModal={() => { setModalIsOpen(false) }}
-      >
+      <Modal isOpen={modalIsOpen} onMouseEnter={onMouseOver}>
+        
         <div className={Styles.modalTextContainer}>
           <p>pra ver seus pedidos e ter uma experiência personalizada, acesse sua conta :)</p>
-          <button type="" className={Styles.entrar}>entrar</button>
+          <button type="" className={Styles.entrar} >entrar</button>
           <button type="" className={Styles.cadastro}>cadastrar</button>
           <p>comprou na loja física ou no app da Ame? <span>Acompanhar o pedido</span></p>
       </div>
+      
       </Modal>
     </>
   )
@@ -93,7 +92,7 @@ const SearchBar = () => {
           <ButtonLogin />
           <SearchBarIcons />
           <MenuLinks />
-          <NavLinks/>
+
         </div>
       </div>
     </>

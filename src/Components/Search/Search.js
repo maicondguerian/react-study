@@ -9,7 +9,9 @@ import  { useState } from 'react';
     return(
         <>
             <div  className={Styles.inputBar}>
-                <input type="text" className={Styles.inputSearchBar} name="Search-bar"  placeholder='busque aqui seu produto' onClick={()=>setIsModalVisible(true)} />
+                <input type="text" className={Styles.inputSearchBar} name="Search-bar"  
+                    placeholder='busque aqui seu produto' 
+                    onClick={()=>setIsModalVisible(true)} />
                 { Icon == null ? <></> : <Icon className={Styles.IconSearch} />}
             </div>
             { isModalVisible ? <Overlay zIndex={73} onclick={()=>{setIsModalVisible(false)}}></Overlay> : null}

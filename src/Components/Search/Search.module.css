@@ -25,12 +25,12 @@
     font-size: 16px;
     padding: 10px;
     margin-left: 50px;
-    box-shadow: rgb(0 0 0 / 12%) 0px 10px 15px;
+    box-shadow: rgb(0 0 0 / 20%) 0px 10px 15px;
    
 }
 
 .inputBar{
-    display: inline-flex;
+    display: flex;
     max-width: 646px;
     position: relative; 
     z-index: 74;
