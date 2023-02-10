@@ -15,7 +15,10 @@ function NewCarousel(){
     
     return (
         <>
-        <Carousel>
+        <Carousel 
+            enableAutoPlay={true}
+            autoPlaySpeed={5000}
+            transitionMs={1000}>
             <Card  src={Banner}/>
             <Card  src={Banner2}/>
             <Card  src={Banner3}/>
