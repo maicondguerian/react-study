@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Carousel from "react-elastic-carousel";
 import Card from "./Card";
 import  Styles from "./caroussel.module.css";
@@ -19,39 +19,28 @@ const banners = [Banner1, Banner2, Banner3, Banner4, Banner5, Banner6, Banner7, 
 
 function MiniCarousel() {
     
-    const breakPoints = [{ width: 550, itemsToShow: 10, itemsToScroll: 12 }];
+    const breakPoints = [{ itemsToShow: 10, itemsToScroll: 12 }];
 
     const [items] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
-    const [index, setIndex] = useState(0);
-    
-    useEffect(() => {
-      const intervalId = setInterval(() => {
-        setIndex((index + 1) % items.length);
-      }, 2000);
-
-      return () => {
-        clearInterval(intervalId);
-      };
-    }, [index, items.length]);
-    
-
     
     return (
-      <div className={Styles.AppCarrouselMini}>
-        <div className={Styles.carouselWrapper}>
-          <Carousel 
-                breakPoints={breakPoints}
-                showArrows={true}
-                pagination={false}
-                enableAutoPlay={true}
-                autoPlayInterval={3000} 
-            >
-            {items.map((item, index) => (
-              <Card src={banners[index]} />
-            ))}
-          </Carousel>
-        </div>
+    
+        <div className={Styles.AppCarrouselMini}>
+            <div className={Styles.carouselWrapper}>
+                <Carousel 
+                    breakPoints={breakPoints}
+                    showArrows={true}
+                    pagination={false}
+                    enableAutoPlay={true}
+                    autoPlayInterval={3000}
+                    autoTabIndexVisibleItems={true}>
+                        {items.map((item, index) => (
+                        <Card src={banners[index]} />
+                    ))}
+                </Carousel>
+            </div>
       </div>
+        
     );
 }
 
