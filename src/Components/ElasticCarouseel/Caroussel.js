@@ -13,7 +13,7 @@ import Banner8 from './assets/newbanner.webp'
 
 const BannerBottom =()=>{
 
-    return <img src={Banner8} className='BannerBottom' />
+    return <img src={Banner8} className='bannerBottom' />
 }
 
 
@@ -21,7 +21,7 @@ function NewCarousel(){
     
     return (
         <div >
-            <Carousel  
+            <Carousel  style={{maxWidth:'1440px', marginLeft:'240px'}}
                 enableAutoPlay={true}
                 autoPlaySpeed={5000}
                 transitionMs={1000}
@@ -37,6 +37,7 @@ function NewCarousel(){
                 <Card  src={Banner7}/>
             </Carousel>
             <BannerBottom/>
+
         </div>
     )
 }
